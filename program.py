@@ -49,7 +49,7 @@ print("Awesome. Now moving on to weight.")
 weight = True
 
 while weight:
-    print("Enter your weight in lbs")
+    print("Enter your weight in lbs.")
 
     def user_weight():
         while True:
@@ -74,3 +74,14 @@ while weight:
             weight_restart = False
         else:
             print("You must enter either y or n. Try again.")
+
+BMI = float(((pounds)/(((feet * 12) + inches)**2))*(703)) 
+
+if BMI < 18.5:
+    print(f"Your BMI is {round(BMI, 2)}. This is classified as being underweight.")
+elif 18.5 < BMI < 24.9:
+    print(f"Your BMI is {round(BMI, 2)}. This is classified as a normal BMI.")
+elif 25 < BMI < 29.9:
+    print(f"Your BMI is {round(BMI, 2)}. This is classifed as being overweight.")
+elif BMI >= 30:
+    print(f"Your BMI is {round(BMI, 2)}. This is classified as being obese.")
