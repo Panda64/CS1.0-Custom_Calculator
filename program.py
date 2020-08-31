@@ -2,16 +2,20 @@
 # Program - BMI Calculator 
 
 program = True
-
+               # Lines 4 and 6 are setting up a while loop so the user could restart the program at the end if they wished to
 while program:
+    # Introduction Message
     print("Your Body Mass Index, or BMI, is a measure of your body fat based off of your height and weight. \
 A normal BMI is anywhere between 18.5-24.9.")
 
     height = True
-
+                  # Lines 11 and 13 are setting up a while loop so the user could re-enter their height if they happened to make a mistake
     while height:
+        # Getting the users height (Both in feet and inches)
         print("To start, enter how many feet tall you are. We will get to the inches in a second.")
 
+        # Making sure that the user only enters whole numbers. The program will keep asking the user for an input until a whole number is given
+        # (This is a similiar case for all inputs in this program)
         def user_feet():
             while True:
                 try:
@@ -32,6 +36,7 @@ A normal BMI is anywhere between 18.5-24.9.")
 
         inches = user_inches()
 
+        # Asking the user if they would like to restart the height process again, as referenced above
         print(f"Okay, got it. You are {feet}ft. {inches}in. Is this correct? (y/n)")
 
         height_restart = True
@@ -50,8 +55,9 @@ A normal BMI is anywhere between 18.5-24.9.")
     print("Awesome. Now moving on to weight.")
 
     weight = True
-
+                  # Same thing as height
     while weight:
+        # Getting the users weight
         print("Enter your weight in lbs.")
 
         def user_weight():
@@ -78,8 +84,10 @@ A normal BMI is anywhere between 18.5-24.9.")
             else:
                 print("You must enter either y or n. Try again.")
 
+    # Calculating the BMI
     BMI = float(((pounds)/(((feet * 12) + inches)**2))*(703)) 
 
+    # Displaying the results to the user (rounded to two decimal places) depending on which BMI classification they are in
     if BMI < 18.5:
         print(f"Your BMI is {round(BMI, 2)}. This is classified as being underweight.")
     elif 18.5 < BMI < 24.9:
@@ -89,6 +97,7 @@ A normal BMI is anywhere between 18.5-24.9.")
     elif BMI >= 30:
         print(f"Your BMI is {round(BMI, 2)}. This is classified as being obese.")
 
+    # Asking the user if they would like to run this program again, as referenced above
     print("Do you want to run this program again? (y/n)")
 
     program_restart = True
