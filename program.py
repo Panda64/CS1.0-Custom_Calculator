@@ -43,3 +43,34 @@ while height:
             height_restart = False
         else:
             print("You must enter either y or n. Try again")
+
+print("Awesome. Now moving on to weight.")
+
+weight = True
+
+while weight:
+    print("Enter your weight in lbs")
+
+    def user_weight():
+        while True:
+            try:
+                return int(input())
+            except ValueError:
+                print("You must enter a whole number. Round if you have to.")
+    
+    pounds = user_weight()
+
+    print(f"Copy that. You entered {pounds}lbs. Is this correct? (y/n)")
+
+    weight_restart = True
+
+    while weight_restart:
+        weight_choice = input()
+
+        if weight_choice == "y" or weight_choice == "Y":
+            weight = False
+            weight_restart = False
+        elif weight_choice == "n" or weight_choice == "N":
+            weight_restart = False
+        else:
+            print("You must enter either y or n. Try again.")
