@@ -1,6 +1,6 @@
 # BMI_Custom_Calculator
 
-This is a calculator that tells you what your BMI is (Body Mass Index)
+This is a calculator that tells you what your BMI is (Body Mass Index) written in Python 3.
 
 As explained in the the introductory message of the program, a BMI is a measure of ones body fat based on their height and weight. 
 
